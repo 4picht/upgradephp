@@ -2,5 +2,8 @@
     "name": "4picht/upgradephp",
     "description": "Mirror of http://include-once.org/p/upgradephp/",
     "license": "public domain",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "files": ["src/upgrade.php"]
+    }
 }

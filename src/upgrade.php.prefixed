@@ -410,7 +410,7 @@ if (defined("UPGRADEPHP_OVERRIDE") and function_exists("runkit_function_remove")
    define("PHP_SESSION_NONE", 1);
    define("PHP_SESSION_ACTIVE", 2);
    function up_session_status() {
-       return (ini_get("session.name") != "") ? PHP_SESSION_DISABLED : 
+       return (ini_get("session.name") == "") ? PHP_SESSION_DISABLED : 
            (isset($_SESSION) ? PHP_SESSION_ACTIVE : PHP_SESSION_NONE);
    }
 

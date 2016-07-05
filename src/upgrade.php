@@ -437,7 +437,7 @@ if (!function_exists("session_status")) {
    define("PHP_SESSION_NONE", 1);
    define("PHP_SESSION_ACTIVE", 2);
    function session_status() {
-       return (ini_get("session.name") != "") ? PHP_SESSION_DISABLED : 
+       return (ini_get("session.name") == "") ? PHP_SESSION_DISABLED : 
            (isset($_SESSION) ? PHP_SESSION_ACTIVE : PHP_SESSION_NONE);
    }
 }
